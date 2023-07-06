@@ -2,6 +2,7 @@ const getCourses = require('../lib/getCourses');
 const subjectsRouter = require('express').Router()
 
 subjectsRouter.get('/', async (req, res) => {
+  res.setHeader('Cache-Control', 's-max-age=86400, stale-while-revalidate');
   res.json(req.subjects);
 });
 
