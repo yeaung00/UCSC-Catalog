@@ -13,3 +13,5 @@ app.use('/api/subjects', subjectsRouter);
 
 
 app.listen(3001, () => console.log('listening on port http://localhost:3001'))
+
+module.exports = app;
